@@ -3,20 +3,20 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>TQCharacterEditor</artifactId>
-        <groupId>tq.character.editor</groupId>
+        <groupId>org.arpg.character.editor</groupId>
+        <artifactId>ace</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ComponentTests</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>TQCharacterEditor::ComponentTests</name>
+    <name>ACE::ComponentTests</name>
 
     <dependencies>
         <!-- INTERNAL -->
         <dependency>
-            <groupId>tq.character.editor</groupId>
+            <groupId>org.arpg.character.editor</groupId>
             <artifactId>Application</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

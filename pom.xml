@@ -12,11 +12,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>tq.character.editor</groupId>
-    <artifactId>TQCharacterEditor</artifactId>
+    <groupId>org.arpg.character.editor</groupId>
+    <artifactId>ace</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>TQCharacterEditor::Parent</name>
-    <description>Character editor for Titan Quest</description>
+    <name>ACE::Parent</name>
+    <description>Base project for different ARPG Character editors</description>
 
     <modules>
         <module>Application</module>
