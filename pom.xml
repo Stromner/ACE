@@ -39,4 +39,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>ace</id>
+            <name>David Strömner</name>
+        </repository>
+    </distributionManagement>
 </project>
