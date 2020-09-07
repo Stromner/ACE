@@ -43,7 +43,7 @@
     <distributionManagement>
         <repository>
             <id>ace</id>
-            <name>David Strömner</name>
+            <url>https://maven.pkg.github.com/stromner/ace</url>
         </repository>
     </distributionManagement>
 </project>
