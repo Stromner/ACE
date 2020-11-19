@@ -12,7 +12,7 @@ Base project for multiple ARPG Character Editor(s) (ACE) that allows you to edit
 
 |Game|Status|
 |-|-|
-|Titan Quest|:children_crossing:|
+|[Titan Quest](https://github.com/Stromner/TQCharacterEditor)|:children_crossing:|
 |Diablo|:x:|
 |Diablo 2|:x:|
 |Grim Dawn|:x:|
