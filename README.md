@@ -19,6 +19,7 @@ Base project for multiple ARPG Character Editor(s) (ACE) that allows you to edit
 |Torchlight 1|:x:|
 |Torchlight 2|:x:|
 |Torchlight 3|:x:|
+|Chronicon|:x:|
 
 ## For devs
 Description of how the tool is built, coming eventually
