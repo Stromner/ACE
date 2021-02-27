@@ -13,6 +13,10 @@
     <version>1.0-SNAPSHOT</version>
     <name>ACE::ComponentTests</name>
 
+    <properties>
+        <maven.deploy.skip>false</maven.deploy.skip>
+    </properties>
+
     <dependencies>
         <!-- INTERNAL -->
         <dependency>
