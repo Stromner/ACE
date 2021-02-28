@@ -19,7 +19,7 @@
     <description>Base project for different ARPG Character editors</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>15</java.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
