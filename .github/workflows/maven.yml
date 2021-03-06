@@ -24,7 +24,7 @@ jobs:
         server-password: MAVEN_PASSWORD
         
     - name: Set Maven version
-      run: mvn versions:set -DnewVersion=${GITHUB_RUN_NUMBER}
+      run: mvn versions:set -DnewVersion=${GITHUB_RUN_NUMBER} -Psonatype
     
     - name: Publish package
       run: mvn --batch-mode deploy
