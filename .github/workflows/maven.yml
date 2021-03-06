@@ -31,7 +31,8 @@ jobs:
       run: |
         mkdir -p ~/.gnupg/
         printf "$GPG_PRIVATE_KEY" | base64 --decode > ~/.gnupg/private.key
-        echo "$GPG_PASSPHRASE" | gpg --batch --yes --passphrase-fd 0 ~/.gnupg/private.key
+        echo "$GPG_PASSPHRASE" | gpg --batch --yes --import --passphrase-fd 0 ~/.gnupg/private.key
+#        echo "$GPG_PASSPHRASE" | gpg --batch --import ~/.gnupg/private.key
 #        gpg --batch --import ~/.gnupg/private.key
       env:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
