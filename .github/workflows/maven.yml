@@ -23,6 +23,7 @@ jobs:
         server-username: MAVEN_USERNAME
         server-password: MAVEN_PASSWORD
         gpg-private-key: GPG_SIGNING_KEY
+        gpg-passphrase: ""
         
     - name: Set Maven version
       run: mvn versions:set -DnewVersion=${GITHUB_RUN_NUMBER} -Psonatype
