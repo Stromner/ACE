@@ -50,4 +50,9 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+
+    <scm>
+        <tag>ace-1</tag>
+        <connection>scm:git:git@github.com:Stromner/ACE.git</connection>
+    </scm>
 </project>
