@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Configure GPG Key
+      run: |
+        mkdir -p ~/.gnupg/
+        printf "$GPG_SIGNING_KEY" | base64 --decode > ~/.gnupg/private.key
+        gpg --import ~/.gnupg/private.key
+    
     - uses: actions/checkout@v2
     - name: Set up Maven Central Repository
       uses: actions/setup-java@v1
@@ -28,6 +34,8 @@ jobs:
     
     - name: Publish package
       run: mvn --batch-mode deploy
+      
       env:
         MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+        GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
