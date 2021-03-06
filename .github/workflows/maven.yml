@@ -28,14 +28,13 @@ jobs:
         
         
     - name: Configure GPG Key
-    run: |
+      run: |
         mkdir -p ~/.gnupg/
         printf "$GPG_SIGNING_KEY" | base64 --decode > ~/.gnupg/private.key
         gpg --batch --import ~/.gnupg/private.key
-    env:
+      env:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-
         
     - name: Set Maven version
       run: mvn versions:set -DnewVersion=${GITHUB_RUN_NUMBER} -Psonatype
