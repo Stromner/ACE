@@ -30,7 +30,7 @@ jobs:
     - name: Configure GPG Key
       run: |
         mkdir -p ~/.gnupg/
-        printf "$GPG_SIGNING_KEY" | base64 --decode > ~/.gnupg/private.key
+        printf "$GPG_PRIVATE_KEY" | base64 --decode > ~/.gnupg/private.key
         gpg --batch --import ~/.gnupg/private.key
       env:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
