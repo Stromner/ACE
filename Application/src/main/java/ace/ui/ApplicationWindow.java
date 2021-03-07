@@ -17,6 +17,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.nio.ByteBuffer;
 
+/**
+ * Root frame and menu system
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class ApplicationWindow {
@@ -32,6 +35,9 @@ public class ApplicationWindow {
     private JFileChooser fileChooser;
     private WaitDialog waitDialog;
 
+    /**
+     * Post constructor invoked by Spring
+     */
     @PostConstruct
     public void init() {
         createFrame();
@@ -43,12 +49,20 @@ public class ApplicationWindow {
         frame.setVisible(true);
     }
 
+    /**
+     * When the database have been initiated display the root pane
+     * @param event triggering event for initiation
+     */
     @EventListener
     public void onDatabaseInitiatedEvent(DataLayerInitiatedEvent event) {
         frame.setContentPane(contentPanel);
         waitDialog.closeWaitDialog();
     }
 
+    /**
+     * If issue occur during database initiation display dialog
+     * @param event triggering event for dialog
+     */
     @EventListener
     public void onFailedToLoadFileEvent(FailedToLoadFileEvent event) {
         frame.setContentPane(new JPanel());

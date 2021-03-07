@@ -52,14 +52,25 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>se.jiderhamn</groupId>
-                <artifactId>promote-maven-plugin</artifactId>
-                <version>2.0.1</version>
-                <!-- Automatically execute promote:make-promotable after each snapshot build -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>attach-sources</id>
                         <goals>
-                            <goal>make-promotable</goal>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>

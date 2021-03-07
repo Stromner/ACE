@@ -11,6 +11,9 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Sub-panel for {@link ace.ui.components.panels.CharacterPanel} related to general information about the player
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class GeneralPanel extends JPanel {
@@ -27,6 +30,9 @@ public class GeneralPanel extends JPanel {
         setLayout(new GridLayout(0, 1));
     }
 
+    /**
+     * @throws NoSuchMethodException reflection exception from trying to create invalid method
+     */
     public void renderData() throws NoSuchMethodException {
         removeAll();
         createGeneralPanel();

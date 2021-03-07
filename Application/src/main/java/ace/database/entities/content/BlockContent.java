@@ -6,15 +6,26 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.util.Arrays;
 
+/**
+ * Database entry for storing the begin_block end_block tags
+ */
 @Entity
 public class BlockContent extends DataContent<byte[]> {
     @Column(name = "blockDataContent", nullable = false, length = 19)
     private byte[] dataContent;
 
+    /**
+     * Constructor needed by H2
+     */
     protected BlockContent() {
 
     }
 
+    /**
+     * General constructor used by program
+     * @param variable name
+     * @param dataContent byte content
+     */
     public BlockContent(Variable variable, byte[] dataContent) {
         super(variable);
         this.dataContent = dataContent;

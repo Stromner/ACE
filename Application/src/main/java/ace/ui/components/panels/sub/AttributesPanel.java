@@ -12,6 +12,9 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Sub-panel for {@link ace.ui.components.panels.CharacterPanel} related to attribute changes for the player
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class AttributesPanel extends JPanel {
@@ -31,6 +34,10 @@ public class AttributesPanel extends JPanel {
         setLayout(new GridLayout(0, 1));
     }
 
+    /**
+     * Create and display the attribute data
+     * @throws NoSuchMethodException reflection exception from trying to create invalid method
+     */
     public void renderData() throws NoSuchMethodException {
         removeAll();
         createAttributesPanel();

@@ -12,19 +12,25 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Panel for displaying and modifying player's data
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class CharacterPanel extends JPanel {
     @Autowired
-    GeneralPanel generalPanel;
+    private GeneralPanel generalPanel;
     @Autowired
-    AttributesPanel attributesPanel;
+    private AttributesPanel attributesPanel;
 
     @PostConstruct
     private void init() {
         setLayout(new GridBagLayout());
     }
 
+    /**
+     * @throws NoSuchMethodException reflection exception from trying to create invalid method
+     */
     public void renderData() throws NoSuchMethodException {
         removeAll();
 

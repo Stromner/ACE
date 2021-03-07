@@ -7,10 +7,17 @@ import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Glossary for all the fields in a save file
+ */
 @Component
 public class VariablesGlossary {
     private static Map<String, VariableType> glossaryMap;
 
+    /**
+     * @param variableName to look up
+     * @return return value from map
+     */
     public static VariableType lookupVariable(String variableName) {
         return glossaryMap.get(variableName);
     }

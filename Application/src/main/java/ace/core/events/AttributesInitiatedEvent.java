@@ -2,6 +2,9 @@ package ace.core.events;
 
 import org.springframework.context.ApplicationEvent;
 
+/**
+ * Custom ApplicationEvent
+ */
 public class AttributesInitiatedEvent extends ApplicationEvent {
     /**
      * Create a new {@code ApplicationEvent}.

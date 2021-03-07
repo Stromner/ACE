@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+/**
+ * Writes data back to the save file in the correct format
+ */
 @Component
 public class DatabaseFileWriter implements IFileWriter {
     private static final Logger log = LoggerFactory.getLogger(DatabaseFileWriter.class);
@@ -50,32 +53,26 @@ public class DatabaseFileWriter implements IFileWriter {
 
     private void saveDataContent(FileOutputStream fos, DataContent<?> content) throws IOException {
         switch (content.getVariable().getVariableType()) {
-            case INT:
+            case INT -> {
                 Integer i = (Integer) content.getDataContent();
                 fos.write(ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(i).array());
-                break;
-            case FLOAT:
+            }
+            case FLOAT -> {
                 Float f = (Float) content.getDataContent();
                 fos.write(ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putFloat(f).array());
-                break;
-            case UTF8:
-                saveString(fos, (String) content.getDataContent(), false);
-                break;
-            case UTF16:
-                saveString(fos, (String) content.getDataContent(), true);
-                break;
-            case BLOCK:
-            case ID:
-                fos.write((byte[]) content.getDataContent());
-                break;
-            case STREAM:
+            }
+            case UTF8 -> saveString(fos, (String) content.getDataContent(), false);
+            case UTF16 -> saveString(fos, (String) content.getDataContent(), true);
+            case BLOCK, ID -> fos.write((byte[]) content.getDataContent());
+            case STREAM -> {
                 byte[] b = (byte[]) content.getDataContent();
                 fos.write(ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN).putInt(b.length).array());
                 fos.write(b);
-                break;
-            default:
+            }
+            default -> {
                 log.error("Invalid variable type '{}'", content.getVariable().getVariableType());
                 throw new RuntimeException("Invalid variable type");
+            }
         }
     }
 

@@ -12,6 +12,9 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Root panel to add all swing containers to
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class ContentPanel extends JPanel {
@@ -30,6 +33,9 @@ public class ContentPanel extends JPanel {
         sidebar.addTab("Cheats", cheatPanel);
     }
 
+    /**
+     * @param event triggers upon loading a save file
+     */
     @EventListener
     public void onDatabaseInitiatedEvent(DataLayerInitiatedEvent event) {
         removeAll();

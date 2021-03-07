@@ -22,13 +22,14 @@ import java.nio.ByteOrder;
 /**
  * File structure:
  * <p>
- * Variable:
- * <4 bytes describing how many bytes the variableName starting at next byte is>
- * <x number of bytes for the variableName>
- * <4 bytes describing how many bytes the variableContent starting at next byte is>
- * SPECIAL CASE: ID - always the next 16 bytes
- * Block:
- * <BEGIN_BLOCK/END_BLOCK containers for Variables>
+ * Variable:<br>
+ * &lt;4 bytes describing how many bytes the variableName starting at next byte is&gt;<br>
+ * &lt;x number of bytes for the variableName&gt;<br>
+ * &lt;4 bytes describing how many bytes the variableContent starting at next byte is&gt;<br>
+ * SPECIAL CASE: ID - always the next 16 bytes<br>
+ * <p>
+ * Block:<br>
+ * &lt;BEGIN_BLOCK/END_BLOCK containers for Variables&gt;
  */
 @Component
 public class DatabaseFileReader implements IFileReader<ByteBuffer> {

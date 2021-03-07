@@ -15,7 +15,9 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
-
+/**
+ * Implements {@link IPlayerData}
+ */
 @Service
 public class PlayerData implements IPlayerData {
     private static final Logger log = LoggerFactory.getLogger(PlayerData.class);
@@ -41,6 +43,10 @@ public class PlayerData implements IPlayerData {
     private IntContent unspentSkillPoints;
     private IntContent playerLevel;
 
+    /**
+     * When the database have initiated read in all attributes
+     * @param event triggering event for read
+     */
     @EventListener
     public void onDatabaseInitiatedEvent(AttributesInitiatedEvent event) {
         playerName = contentRepository.findByVariableName("myPlayerName");

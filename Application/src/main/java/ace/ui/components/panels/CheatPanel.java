@@ -14,6 +14,9 @@ import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Specific panel just for cheat related changes
+ */
 @Component
 @ConditionalOnProperty(name = "editor.live.boot")
 public class CheatPanel extends JPanel {
@@ -31,6 +34,9 @@ public class CheatPanel extends JPanel {
         setLayout(new GridBagLayout());
     }
 
+    /**
+     * @throws NoSuchMethodException reflection exception from trying to create invalid method
+     */
     public void renderData() throws NoSuchMethodException {
         removeAll();
         GridBagConstraints c = new GridBagConstraintsBuilder()

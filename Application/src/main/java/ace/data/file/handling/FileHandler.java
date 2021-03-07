@@ -6,6 +6,10 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
+/**
+ *
+ * @param <V> Format for the raw data
+ */
 @Component
 public class FileHandler<V> implements IFileHandler<V> {
     @Resource(name = "databaseFileReader")

@@ -1,19 +1,28 @@
 package ace.ui.components.partial.text.field;
 
 import javax.swing.*;
+import java.awt.*;
 
+/**
+ * Displays a {@link Label} and a {@link JTextField} which disables editing the field
+ * @param <T> type of stored data
+ */
 public class TextReadOnlyDataPanel<T> extends ATextField<T, JTextField> {
-    public TextReadOnlyDataPanel(String variableName, T variableValue) {
-        super(variableName);
+    /**
+     * @param name name to display on the {@link Label} in the super class
+     * @param variableValue value to show in the {@link TextFormattedDataPanel#variableValueContainer}
+     */
+    public TextReadOnlyDataPanel(String name, T variableValue) {
+        super(name);
 
-        this.variableValue = new JTextField();
+        this.variableValueContainer = new JTextField();
         if (variableValue instanceof String) {
-            this.variableValue.setText((String) variableValue);
+            this.variableValueContainer.setText((String) variableValue);
         } else {
-            this.variableValue.setText(String.valueOf(variableValue));
+            this.variableValueContainer.setText(String.valueOf(variableValue));
         }
-        this.variableValue.setEditable(false);
+        this.variableValueContainer.setEditable(false);
 
-        add(this.variableValue);
+        add(this.variableValueContainer);
     }
 }

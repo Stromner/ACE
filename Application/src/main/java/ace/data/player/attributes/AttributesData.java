@@ -18,6 +18,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implements {@link IAttributesData}
+ */
 @Service
 public class AttributesData implements IAttributesData {
     private static final Logger log = LoggerFactory.getLogger(AttributesData.class);
@@ -41,6 +44,10 @@ public class AttributesData implements IAttributesData {
     private FloatContent healthAttribute;
     private FloatContent manaAttribute;
 
+    /**
+     * When the database have initiated read in all attributes
+     * @param event triggering event for read
+     */
     @EventListener
     public void onDatabaseInitiatedEvent(DatabaseInitiatedEvent event) {
         unspentAttributePoints = contentRepository.findByVariableName("modifierPoints");
