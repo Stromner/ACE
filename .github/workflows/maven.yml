@@ -32,9 +32,6 @@ jobs:
       env:
         GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
         
-    - name: Generate Java sources
-      run: mvn source:jar promote:make-promotable
-        
     - name: Set Maven version
       run: mvn versions:set -DnewVersion=${GITHUB_RUN_NUMBER}
     
