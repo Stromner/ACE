@@ -14,10 +14,6 @@
     <!--<version>1.0.0</version>--><!--RELEASE VERSION-->
     <name>ACE::Application</name>
 
-    <properties>
-        <maven.deploy.skip>false</maven.deploy.skip>
-    </properties>
-
     <dependencies>
         <!-- SPRING -->
         <dependency>

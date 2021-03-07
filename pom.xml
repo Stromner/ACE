@@ -20,7 +20,6 @@
 
     <properties>
         <java.version>15</java.version>
-        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
     <modules>
