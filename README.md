@@ -7,13 +7,13 @@ Base project for multiple ARPG Character Editor(s) (ACE) that allows you to edit
 |Status|Icon|
 |-|-|
 |Done|:heavy_check_mark:|
-|Inprogress|:children_crossing:|
+|Inprogress|:construction:|
 |Not started|:x:|
 
 |Game|Status|
 |-|-|
-|[Titan Quest](https://github.com/Stromner/TQCharacterEditor)|:children_crossing:|
-|Diablo|:x:|
+|[Titan Quest](https://github.com/Stromner/TQCharacterEditor)|:construction:|
+|[Diablo](https://github.com/Stromner/ACE-Diablo1)|:construction:|
 |Diablo 2|:x:|
 |Grim Dawn|:x:|
 |Torchlight 1|:x:|
