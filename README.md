@@ -14,7 +14,7 @@ Base project for multiple ARPG Character Editor(s) (ACE) that allows you to edit
 |-|-|
 |[Titan Quest](https://github.com/Stromner/TQCharacterEditor)|:construction:|
 |[Diablo](https://github.com/Stromner/ACE-Diablo1)|:construction:|
-|Diablo 2|:x:|
+|[Diablo 2](https://github.com/Stromner/ACE-Diablo2)|:construction:|
 |Grim Dawn|:x:|
 |Torchlight 1|:x:|
 |Torchlight 2|:x:|
